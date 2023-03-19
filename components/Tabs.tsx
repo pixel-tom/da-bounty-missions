@@ -1,49 +1,46 @@
 // components/Tabs.tsx
 import React, { useState } from 'react';
 import BountyCard from './BountyCard';
+import nodeImage from '../public/node.png';
+import nextImage from '../public/next.png';
+import pythonImage from '../public/python.png';
+import rustImage from '../public/rust.png';
 
 const sampleBounties = [
-    {
-    title: 'Build a React Native Mobile App',
-    description: 'Create a mobile app using React Native that allows users to search for and view information about movies and TV shows.',
-    reward: 20,
-    codingLanguage: 'JavaScript',
+  {
+    title: 'Solana Wallet',
+    description: 'Develop a Solana wallet using Rust, allowing users to securely manage their SOL and SPL Tokens.',
+    reward: 60,
+    codingLanguage: 'Rust',
     live: true,
-    imageUrl: 'https://via.placeholder.com/150',
-    },
-    {
-    title: 'iOS Game Development',
-    description: 'Develop a simple iOS game using Swift that involves user interaction and scoring.',
-    reward: 30,
-    codingLanguage: 'Swift',
-    live: false,
-    imageUrl: 'https://via.placeholder.com/150',
-    },
-    {
-    title: 'Python Data Analysis Tool',
-    description: 'Create a Python script that can process and analyze large datasets, outputting insights and visualizations.',
-    reward: 40,
-    codingLanguage: 'Python',
+    imageUrl: 'https://pbs.twimg.com/media/Frmd8hVXgAAGjNS?format=jpg&name=large',
+  },
+  {
+    title: 'Smart Contract Code Audit',
+    description: 'Perform a thorough code audit on a Node.js-based Solana project, identifying potential security vulnerabilities and inefficiencies.',
+    reward: 45,
+    codingLanguage: 'Node.js',
     live: true,
-    imageUrl: 'https://via.placeholder.com/150',
-    },
-    {
-    title: 'Node.js Web App with MongoDB',
-    description: 'Develop a Node.js web application with MongoDB that allows users to create and manage their own todo lists.',
-    reward: 25,
-    codingLanguage: 'JavaScript',
+    imageUrl: 'https://pbs.twimg.com/media/FrmeBFGWIBMYOeG?format=jpg&name=large',
+  },
+  {
+    title: 'NFT Marketplace',
+    description: 'Build an NFT marketplace on Solana using Rust, allowing users to buy, sell, and trade NFTs.',
+    reward: 100,
+    codingLanguage: 'Rust',
     live: true,
-    imageUrl: 'https://via.placeholder.com/150',
-    },
-    {
-    title: 'Ethereum Smart Contract',
-    description: 'Write a smart contract on the Ethereum blockchain that implements a simple voting system.',
-    reward: 50,
-    codingLanguage: 'Solidity',
-    live: false,
-    imageUrl: 'https://via.placeholder.com/150',
-    },
-    ];
+    imageUrl: 'https://pbs.twimg.com/media/FrmhbVcXsAIfFzu?format=jpg&name=large',
+  },
+  {
+    title: 'Front End Coinflip Game',
+    description: 'Create a front end for a Solana-based coinflip game using Next.js, allowing users to wager and win SOL and other SPL Tokens.',
+    reward: 35,
+    codingLanguage: 'Next.js',
+    live: true,
+    imageUrl: 'https://pbs.twimg.com/media/Frmd-iFWIAAN-xk?format=png&name=large',
+  },
+];
+
 
 const Tabs: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');

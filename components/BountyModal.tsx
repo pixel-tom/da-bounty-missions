@@ -1,6 +1,6 @@
 // components/BountyModal.tsx
-import React from 'react';
-import { Bounty } from './BountyCard';
+import React from "react";
+import { Bounty } from "./BountyCard";
 
 interface Props {
   bounty: Bounty;
@@ -18,16 +18,28 @@ const BountyModal: React.FC<Props> = ({ bounty, isOpen, closeModal }) => {
         onClick={closeModal}
       ></div>
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg w-full max-w-2xl mx-4 z-10">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">{bounty.title}</h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-6">{bounty.description}</p>
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
+          {bounty.title}
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">
+          {bounty.description}
+        </p>
         <div className="space-y-2 mb-6">
-          <p className="text-green-600 dark:text-green-400 font-bold">{bounty.reward} SOL</p>
-          <p className="text-gray-600 dark:text-gray-300">Language: {bounty.codingLanguage}</p>
+          <p className="text-green-600 dark:text-green-400 font-bold">
+            {bounty.reward} SOL
+          </p>
+          <p className="text-gray-600 dark:text-gray-300">
+            Language: {bounty.codingLanguage}
+          </p>
           <div className="flex items-center space-x-2">
             <div
-              className={`w-3 h-3 rounded-full ${bounty.live ? 'bg-green-500' : 'bg-red-500'} transition-colors`}
+              className={`w-3 h-3 rounded-full ${
+                bounty.live ? "bg-green-500" : "bg-red-500"
+              } transition-colors`}
             ></div>
-            <span className="text-gray-600 dark:text-gray-300">{bounty.live ? 'Live' : 'Inactive'}</span>
+            <span className="text-gray-600 dark:text-gray-300">
+              {bounty.live ? "Live" : "Inactive"}
+            </span>
           </div>
         </div>
         <button
