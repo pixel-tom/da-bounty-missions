@@ -1,6 +1,6 @@
 // pages/index.tsx
 import Head from 'next/head';
-import Navbar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Tabs from '../components/Tabs';
 
